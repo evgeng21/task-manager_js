@@ -1,36 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Мой план - Task Manager</title>
-    
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/app.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Мой план</h1>
-        <p>Планируй свои дела и отслеживай прогресс</p>
+      <h1>Мой план</h1>
+      <p>Планируй свои дела и отслеживай прогресс</p>
     </header>
 
     <main>
+      <section>
+        <form>
+          <label for="task_name_input">Название задачи</label>
+          <input
+            type="text"
+            id="task_name_input"
+            required
+          />
 
-        <section>
-            <h2>Мои задачи</h2>
+          <label for="task_category_option">Название задачи</label>
+          <select id="task_category_option" name="category">
+            <option value="work">
+              Работа
+            </option>
+            <option value="study">
+              Обучение
+            </option>
+            <option value="personal">
+              Личное
+            </option>
+        </select>
 
-            <button id="add-task">
-                Добавить задачу
-            </button>
+          <fieldset>
+            <legend>Приоритет</legend>
+            <div>
+                <label for="low"
+                <input type="radio" id="low"/>
+            </div>
+            <div>
+                <label for="middle"
+                <input type="radio" id="middle"/>
+            </div>
+            <div>
+                <label for="high"
+                <input type="radio" id="high@"/>
+            </div>
+          </fieldset>
 
-            <ul id="task-list">
-                <li>Изучить HTML</li>
-                <li>Изучить CSS</li>
-                <li>Изучить JavaScript</li>
-            </ul>
-        </section>
+          <!-- <label for="task_priority_option">Название задачи</label>
+          <option id="task_priority_option">
+            <select>
+              Низкий
+            </select>
+            <select>
+              Средний
+            </select>
+            <select>
+              Высокий
+            </select>
+          </option> -->
 
+          <label for="task_date_input">Срок выполнения</label>
+          <input type="date" id="task_date_input" />
+
+          <button>Добавить задачу</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Мои задачи</h2>
+
+        <button id="add-task">Добавить задачу</button>
+
+        <ul id="task-list">
+          <li>Изучить HTML</li>
+          <li>Изучить CSS</li>
+          <li>Изучить JavaScript</li>
+        </ul>
+      </section>
     </main>
-
-</body>
+  </body>
 </html>
