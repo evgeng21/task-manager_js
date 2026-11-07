@@ -18,58 +18,41 @@
       <section>
         <form>
           <label for="task_name_input">Название задачи</label>
-          <input
-            type="text"
-            id="task_name_input"
-            required
-          />
+          <input type="text" id="task_name_input" required name="task-name" />
 
-          <label for="task_category_option">Название задачи</label>
+          <label for="task-description-text">Описание задачи</label>
+          <textarea
+            id="task-description-text"
+            name="task-description"
+          ></textarea>
+
+          <label for="task_category_option">Категория задачи</label>
           <select id="task_category_option" name="category">
-            <option value="work">
-              Работа
-            </option>
-            <option value="study">
-              Обучение
-            </option>
-            <option value="personal">
-              Личное
-            </option>
-        </select>
+            <option value="work">Работа</option>
+            <option value="study">Обучение</option>
+            <option value="personal">Личное</option>
+          </select>
 
           <fieldset>
             <legend>Приоритет</legend>
             <div>
-                <label for="low"
-                <input type="radio" id="low"/>
+              <label for="low">Низкий</label>
+              <input type="radio" id="low" name="priority" />
             </div>
             <div>
-                <label for="middle"
-                <input type="radio" id="middle"/>
+              <label for="middle">Средний</label>
+              <input type="radio" id="middle" name="priority" />
             </div>
             <div>
-                <label for="high"
-                <input type="radio" id="high@"/>
+              <label for="high">Высокий</label>
+              <input type="radio" id="high" name="priority" />
             </div>
           </fieldset>
-
-          <!-- <label for="task_priority_option">Название задачи</label>
-          <option id="task_priority_option">
-            <select>
-              Низкий
-            </select>
-            <select>
-              Средний
-            </select>
-            <select>
-              Высокий
-            </select>
-          </option> -->
 
           <label for="task_date_input">Срок выполнения</label>
           <input type="date" id="task_date_input" />
 
-          <button>Добавить задачу</button>
+          <button type="submit">Добавить задачу</button>
         </form>
       </section>
 
