@@ -12,6 +12,9 @@ body {
 
 header {
     margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 h1 {
@@ -53,13 +56,27 @@ li {
     border-bottom: 1px solid #e5e7eb;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 form input {
+    width: 100%;
     padding: 5px 10px;
     display: block;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 20px;
 }
 
 form textarea {
     display: block;
+    width: 100%;
+    min-height: 130px;
+    font-size: 20px;
+    padding: 10px 15px;
 }
 
 form select {
@@ -68,6 +85,22 @@ form select {
     font-size: 14px;
 }
 
-form div {
+form .form-marking {
     margin: 15px 0;
+}
+
+.form-marking-el {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+
+    label {
+        display: inline-block;
+        width: 30%;
+    }
+
+    input {
+        width: 20%;
+    }
 }
