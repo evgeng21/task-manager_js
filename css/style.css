@@ -131,3 +131,21 @@ form .form-marking {
         margin: 0;
     }
 }
+
+.grid-test {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.grid-test-el {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background-color: #281638;
+    color: #e5e7eb;
+    border-radius: 10px;
+    
+}
